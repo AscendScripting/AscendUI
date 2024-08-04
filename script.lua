@@ -3,6 +3,10 @@
 --v3rm AbstractPoo	  discord Abstract#8007
 --v3rm 0xDEITY		    discord Deity#0228
 
+if not getgenv().AC_VERSION then
+  getgenv().AC_VERSION = "1.0.0"
+end
+
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
 local UserInputService = game:GetService("UserInputService")
@@ -646,7 +650,7 @@ function Library:create(options)
 		Position = UDim2.new(0, 5, 1, -6),
 		Size = UDim2.new(0.2, 0, 0, 10),
 		Font = Enum.Font.SourceSans,
-		Text = "Status | Idle",
+		Text = "v"..getgenv().AC_VERSION.." | © AscendScripting",
 		Theme = {TextColor3 = "Tertiary"},
 		TextSize = 14,
 		TextXAlignment = Enum.TextXAlignment.Left
