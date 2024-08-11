@@ -450,7 +450,7 @@ function Library:create(options)
 		Parent = (RunService:IsStudio() and LocalPlayer.PlayerGui) or game:GetService("CoreGui"),
 		ZIndexBehavior = Enum.ZIndexBehavior.Global,
 		Name = guiName,
-    Transparency = 0.3,
+    BackgroundTransparency = 0.3,
 	})
 
 	local notificationHolder = gui:object("Frame", {
