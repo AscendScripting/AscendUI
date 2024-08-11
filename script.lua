@@ -469,6 +469,7 @@ function Library:create(options)
 		Size = UDim2.new(),
 		Theme = {BackgroundColor3 = "Main"},
 		Centered = true,
+    BackgroundTransparency = 0.3,
 		ClipsDescendants = true		
 	}):round(10)
 
