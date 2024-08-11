@@ -396,7 +396,7 @@ end
 local updateSettings = function() end
 
 function Library:set_status(txt)
-	self.statusText.Text = txt
+	self.statusText.Text = "© AscendScripting | "..txt
 end
 
 function Library:create(options)
@@ -450,6 +450,7 @@ function Library:create(options)
 		Parent = (RunService:IsStudio() and LocalPlayer.PlayerGui) or game:GetService("CoreGui"),
 		ZIndexBehavior = Enum.ZIndexBehavior.Global,
 		Name = guiName,
+    Transparency = 0.3,
 	})
 
 	local notificationHolder = gui:object("Frame", {
@@ -769,7 +770,7 @@ function Library:create(options)
 
 		local displayName = profile:object("TextLabel", {
 			RichText = true,
-			Text = "Welcome, <font color='rgb(" ..  math.floor(c.R*255) .. "," .. math.floor(c.G*255) .. "," .. math.floor(c.B*255) .. ")'> <b>" .. LocalPlayer.DisplayName .. "</b> </font>",
+			Text = "Welcome, <font color='rgb(" ..  math.floor(c.R*255) .. "," .. math.floor(c.G*255) .. "," .. math.floor(c.B*255) .. ")'> <b>" .. LocalPlayer.DisplayName .. "</b></font>",
 			TextScaled = true,
 			Position = UDim2.new(0, 105,0, 10),
 			Theme = {TextColor3 = {"Tertiary", 10}},
