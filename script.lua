@@ -611,7 +611,7 @@ function Library:create(options)
 		Position = UDim2.new(0, 26, 0.5, 0),
 		BackgroundTransparency = 1,
 		Size = UDim2.new(1, -30, .6, 0),
-		Text = options.Link .. "/home",
+		Text = options.Link .. "/script",
 		Theme = {TextColor3 = "WeakText"},
 		TextSize = 14,
 		TextScaled = false,
@@ -924,7 +924,7 @@ function Library:create(options)
 	return mt
 end
 
-function Library:Notification(options)
+function Library:notification(options)
 	options = self:set_defaults({
 		Title = "Notification",
 		Text = "Your character has been reset.",
@@ -1407,7 +1407,7 @@ function Library:toggle(options)
 	return methods
 end
 
-function Library:Dropdown(options)
+function Library:dropdown(options)
 	options = self:set_defaults({
 		Name = "Dropdown",
 		StartingText = "Select...",
@@ -2997,7 +2997,7 @@ function Library:_theme_selector()
 end
 
 
-function Library:Keybind(options)
+function Library:keybind(options)
 	options = self:set_defaults({
 		Name = "Keybind",
 		Keybind = nil,
@@ -3109,7 +3109,7 @@ function Library:Keybind(options)
 	return methods
 end
 
-function Library:Prompt(options)
+function Library:prompt(options)
 	options = self:set_defaults({
 		Followup = false,
 		Title = "Prompt",
@@ -3267,7 +3267,7 @@ end
 function Library:cp(options)
 	return Library.color_picker(self, options)
 end
-function Library:ColorPicker(options)
+function Library:colorpicker(options)
 	return Library.color_picker(self, options)
 end
 
@@ -3399,7 +3399,7 @@ function Library:slider(options)
 	return methods
 end
 
-function Library:Textbox(options)
+function Library:textbox(options)
 	options = self:set_defaults({
 		Name = "Text Box",
 		Placeholder = "Type something..",
