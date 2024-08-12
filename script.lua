@@ -454,7 +454,7 @@ function Library:create(options)
 
 	local notificationHolder = gui:object("Frame", {
 		AnchorPoint = Vector2.new(1, 1),
-		BackgroundTransparency = 0.5,
+		BackgroundTransparency = 1,
 		Position = UDim2.new(1, -30,1, -30),
 		Size = UDim2.new(0, 300, 1, -60)
 	})
@@ -582,7 +582,8 @@ function Library:create(options)
 	end
 
 	if getgenv then
-		getgenv().AscendUI = closeUI
+		getgenv().AscendUI = gui
+    getgenv().AscendUI.Close = closeUI
 	end
 
 	closeButton.MouseButton1Click:connect(function()
@@ -931,7 +932,7 @@ function Library:notification(options)
 	local fadeOut;
 
 	local noti = self.notifs:object("Frame", {
-		BackgroundTransparency = 1,
+		BackgroundTransparency = 0.5,
 		Theme = {BackgroundColor3 = "Main"},
 		Size = UDim2.new(0, 300,0, 0)
 	}):round(10)
