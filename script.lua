@@ -657,7 +657,7 @@ function Library:create(options)
 		Text = "© AscendScripting | v"..getgenv().AC_VERSION,
 		Theme = {TextColor3 = "Tertiary"},
 		TextSize = 14,
-		TextXAlignment = Enum.TextXAlignment.Left
+		TextXAlignment = Enum.TextXAlignment.Center
 	})
 
 	local homeButton = tabButtons:object("TextButton", {
