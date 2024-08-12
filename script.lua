@@ -469,7 +469,7 @@ function Library:create(options)
 		Theme = {BackgroundColor3 = "Main"},
 		Centered = true,
     BackgroundTransparency = 0.19,
-		ClipsDescendants = true		
+		ClipsDescendants = true
 	}):round(10)
 
 	core:fade(true, nil, 0.2, true)
@@ -826,7 +826,7 @@ function Library:create(options)
 		Position = UDim2.new(1, -10, 1, -10),
 		AnchorPoint = Vector2.new(1, 1),
 		Image = "http://www.roblox.com/asset/?id=8559790237"
-	}):tooltip("settings")
+	}):tooltip("Settings")
 
 	local creditsTabIcon = profile:object("ImageButton", {
 		BackgroundTransparency = 1,
@@ -835,7 +835,7 @@ function Library:create(options)
 		Position = UDim2.new(1, -44, 1, -10),
 		AnchorPoint = Vector2.new(1, 1),
 		Image = "http://www.roblox.com/asset/?id=8577523456"
-	}):tooltip("credits")
+	}):tooltip("Credits")
 
 	local quickAccess = homePage:object("Frame", {
 		BackgroundTransparency = 1,
@@ -1087,7 +1087,8 @@ function Library:tab(options)
 
 	if not options.Internal then
 		quickAccessButton = self.quickAccess:object("TextButton", {
-			Theme = {BackgroundColor3 = "Secondary"}
+			Theme = {BackgroundColor3 = "Secondary"},
+      BackgroundTransparency = 0.19,
 		}):round(5):tooltip(options.Name)
 
 		quickAccessIcon = quickAccessButton:object("ImageLabel", {
