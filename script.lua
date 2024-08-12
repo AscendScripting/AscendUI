@@ -454,7 +454,7 @@ function Library:create(options)
 
 	local notificationHolder = gui:object("Frame", {
 		AnchorPoint = Vector2.new(1, 1),
-		BackgroundTransparency = 0.5,
+		BackgroundTransparency = 1,
 		Position = UDim2.new(1, -30,1, -30),
 		Size = UDim2.new(0, 300, 1, -60)
 	})
@@ -583,7 +583,7 @@ function Library:create(options)
 
 	if getgenv then
 		getgenv().AscendUI = closeUI
-    getgenv().AscendUI.GUI = gui
+    getgenv().AscendGUI = gui
 	end
 
 	closeButton.MouseButton1Click:connect(function()
