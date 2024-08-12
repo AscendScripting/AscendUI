@@ -594,8 +594,8 @@ function Library:create(options)
 		Size = UDim2.new(1, -10, 0, 25),
 		Position = UDim2.new(0, 5,0, 35),
 		Theme = {BackgroundColor3 = "Secondary"},
-    BackgroundTransparency = 0.,
-    Transparency = 0.3
+    BackgroundTransparency = 0.4,
+    Transparency = 0.4
 	}):round(5)
 
 	local searchIcon = urlBar:object("ImageLabel", {
