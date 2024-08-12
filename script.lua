@@ -594,8 +594,7 @@ function Library:create(options)
 		Size = UDim2.new(1, -10, 0, 25),
 		Position = UDim2.new(0, 5,0, 35),
 		Theme = {BackgroundColor3 = "Secondary"},
-    BackgroundTransparency = 0.33,
-    Transparency = 0.33
+    BackgroundTransparency = 0.33
 	}):round(5)
 
 	local searchIcon = urlBar:object("ImageLabel", {
@@ -692,7 +691,7 @@ function Library:create(options)
 	local homePage = content:object("Frame", {
 		Size = UDim2.fromScale(1, 1),
 		Centered = true,
-		BackgroundTransparency = 1
+		BackgroundTransparency = 0.33
 	})
 
 	local tabs = {}
@@ -756,7 +755,8 @@ function Library:create(options)
 	local profile = homePage:object("Frame", {
 		AnchorPoint = Vector2.new(0, .5),
 		Theme = {BackgroundColor3 = "Secondary"},
-		Size = UDim2.new(1, -20, 0, 100)
+		Size = UDim2.new(1, -20, 0, 100),
+    BackgroundTransparency = 0.33
 	}):round(7)
 
 	local profilePictureContainer = profile:object("ImageLabel", {
