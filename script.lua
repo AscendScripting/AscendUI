@@ -594,7 +594,8 @@ function Library:create(options)
 		Size = UDim2.new(1, -10, 0, 25),
 		Position = UDim2.new(0, 5,0, 35),
 		Theme = {BackgroundColor3 = "Secondary"},
-    BackgroundTransparency = 0.3
+    BackgroundTransparency = 0.,
+    Transparency = 0.3
 	}):round(5)
 
 	local searchIcon = urlBar:object("ImageLabel", {
@@ -660,8 +661,8 @@ function Library:create(options)
 	})
 
 	local homeButton = tabButtons:object("TextButton", {
-		Name = "hehehe siuuuuuuuuu",
-		BackgroundTransparency = 0,
+		Name = "Home",
+		BackgroundTransparency = 0.4,
 		Theme = {BackgroundColor3 = "Secondary"},
 		Size = UDim2.new(0, 125, 0, 25)
 	}):round(5)
