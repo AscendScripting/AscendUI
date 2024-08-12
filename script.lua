@@ -879,7 +879,7 @@ function Library:create(options)
 
 	settingsTab:_theme_selector()
 
-	settingsTab:keybind{
+	settingsTab:Keybind{
 		Name = "Toggle Key",
 		Description = "Key to show/hide the UI.",
 		Keybind = Enum.KeyCode.RightAlt,
@@ -924,7 +924,7 @@ function Library:create(options)
 	return mt
 end
 
-function Library:notification(options)
+function Library:Notification(options)
 	options = self:set_defaults({
 		Title = "Notification",
 		Text = "Your character has been reset.",
@@ -935,9 +935,9 @@ function Library:notification(options)
 	local fadeOut;
 
 	local noti = self.notifs:object("Frame", {
-		BackgroundTransparency = 1,
 		Theme = {BackgroundColor3 = "Main"},
-		Size = UDim2.new(0, 300,0, 0)
+		Size = UDim2.new(0, 300,0, 0),
+    BackgroundTransparency = 0.19
 	}):round(10)
 
 	local _notiPadding = noti:object("UIPadding", {
@@ -1283,7 +1283,7 @@ function Library:_resize_tab()
 	end
 end
 
-function Library:toggle(options)
+function Library:Toggle(options)
 	options = self:set_defaults({
 		Name = "Toggle",
 		StartingState = false,
@@ -1293,7 +1293,8 @@ function Library:toggle(options)
 
 	local toggleContainer = self.container:object("TextButton", {
 		Theme = {BackgroundColor3 = "Secondary"},
-		Size = UDim2.new(1, -20, 0, 52)
+		Size = UDim2.new(1, -20, 0, 52),
+    BackgroundTransparency = 0.19
 	}):round(7)
 
 	local on = "http://www.roblox.com/asset/?id=8498709213"
@@ -1406,7 +1407,7 @@ function Library:toggle(options)
 	return methods
 end
 
-function Library:dropdown(options)
+function Library:Dropdown(options)
 	options = self:set_defaults({
 		Name = "Dropdown",
 		StartingText = "Select...",
@@ -1420,7 +1421,8 @@ function Library:dropdown(options)
 
 	local dropdownContainer = self.container:object("TextButton", {
 		Theme = {BackgroundColor3 = "Secondary"},
-		Size = UDim2.new(1, -20, 0, 52)
+		Size = UDim2.new(1, -20, 0, 52),
+    BackgroundTransparency = 0.19
 	}):round(7)
 
 	local text = dropdownContainer:object("TextLabel", {
@@ -1780,7 +1782,8 @@ function Library:button(options)
 
 	local buttonContainer = self.container:object("TextButton", {
 		Theme = {BackgroundColor3 = "Secondary"},
-		Size = UDim2.new(1, -20, 0, 52)
+		Size = UDim2.new(1, -20, 0, 52),
+    BackgroundTransparency = 0.19
 	}):round(7)
 
 	local text = buttonContainer:object("TextLabel", {
@@ -2734,7 +2737,7 @@ function Library:color_picker(options)
 	self:_resize_tab()
 end
 
-function Library:credit(options)
+function Library:Credit(options)
 	options = self:set_defaults({
 		Name = "Creditor",
 		Description = nil
@@ -2743,7 +2746,8 @@ function Library:credit(options)
 
 	local creditContainer = (self.creditsContainer or self.container):object("Frame", {
 		Theme = {BackgroundColor3 = "Secondary"},
-		Size = UDim2.new(1, -20, 0, 52)
+		Size = UDim2.new(1, -20, 0, 52),
+    BackgroundTransparency = 0.19,
 	}):round(7)
 
 	local name = creditContainer:object("TextLabel", {
@@ -2992,7 +2996,7 @@ function Library:_theme_selector()
 end
 
 
-function Library:keybind(options)
+function Library:Keybind(options)
 	options = self:set_defaults({
 		Name = "Keybind",
 		Keybind = nil,
@@ -3002,7 +3006,8 @@ function Library:keybind(options)
 
 	local keybindContainer = self.container:object("TextButton", {
 		Theme = {BackgroundColor3 = "Secondary"},
-		Size = UDim2.new(1, -20, 0, 52)
+		Size = UDim2.new(1, -20, 0, 52),
+    BackgroundTransparency = 0.19
 	}):round(7)
 
 	local text = keybindContainer:object("TextLabel", {
@@ -3103,11 +3108,11 @@ function Library:keybind(options)
 	return methods
 end
 
-function Library:prompt(options)
+function Library:Prompt(options)
 	options = self:set_defaults({
 		Followup = false,
 		Title = "Prompt",
-		Text = "yo momma dead",
+		Text = "This is a sample prompt.",
 		Buttons = {
 			ok = function()
 				return true
@@ -3261,11 +3266,11 @@ end
 function Library:cp(options)
 	return Library.color_picker(self, options)
 end
-function Library:colorpicker(options)
+function Library:ColorPicker(options)
 	return Library.color_picker(self, options)
 end
 
-function Library:slider(options)
+function Library:Slider(options)
 	options = self:set_defaults({
 		Name = "Slider",
 		Default = 50,
@@ -3277,7 +3282,8 @@ function Library:slider(options)
 
 	local sliderContainer = self.container:object("TextButton", {
 		Theme = {BackgroundColor3 = "Secondary"},
-		Size = UDim2.new(1, -20, 0, 56)
+		Size = UDim2.new(1, -20, 0, 56),
+    BackgroundTransparency = 0.19
 	}):round(7)
 
 	local text = sliderContainer:object("TextLabel", {
@@ -3392,7 +3398,7 @@ function Library:slider(options)
 	return methods
 end
 
-function Library:textbox(options)
+function Library:Textbox(options)
 	options = self:set_defaults({
 		Name = "Text Box",
 		Placeholder = "Type something..",
@@ -3402,7 +3408,8 @@ function Library:textbox(options)
 
 	local textboxContainer = self.container:object("TextButton", {
 		Theme = {BackgroundColor3 = "Secondary"},
-		Size = UDim2.new(1, -20, 0, 52)
+		Size = UDim2.new(1, -20, 0, 52),
+    BackgroundTransparency = 0.19
 	}):round(7)
 
 	local text = textboxContainer:object("TextLabel", {
