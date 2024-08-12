@@ -932,7 +932,7 @@ function Library:notification(options)
 	local fadeOut;
 
 	local noti = self.notifs:object("Frame", {
-		BackgroundTransparency = 0.5,
+		BackgroundTransparency = 1,
 		Theme = {BackgroundColor3 = "Main"},
 		Size = UDim2.new(0, 300,0, 0)
 	}):round(10)
