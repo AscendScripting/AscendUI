@@ -421,7 +421,7 @@ function Library:create(options)
 		Name = "AscendUI (Mercury)",
 		Size = UDim2.fromOffset(600, 400),
 		Theme = self.Themes[settings.Theme],
-		Link = "https://github.com/AscendDevelopment/Mercury"
+		Link = "https://github.com/AscendDevelopment/AscendUI"
 	}, options)
 
 	if getgenv and getgenv().AscendUI then
@@ -593,7 +593,8 @@ function Library:create(options)
 	local urlBar = core:object("Frame", {
 		Size = UDim2.new(1, -10, 0, 25),
 		Position = UDim2.new(0, 5,0, 35),
-		Theme = {BackgroundColor3 = "Secondary"}
+		Theme = {BackgroundColor3 = "Secondary"},
+    BackgroundTransparency = 0.3
 	}):round(5)
 
 	local searchIcon = urlBar:object("ImageLabel", {
