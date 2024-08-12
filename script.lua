@@ -2737,7 +2737,7 @@ function Library:color_picker(options)
 	self:_resize_tab()
 end
 
-function Library:Credit(options)
+function Library:credit(options)
 	options = self:set_defaults({
 		Name = "Creditor",
 		Description = nil
