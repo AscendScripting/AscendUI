@@ -1283,7 +1283,7 @@ function Library:_resize_tab()
 	end
 end
 
-function Library:Toggle(options)
+function Library:toggle(options)
 	options = self:set_defaults({
 		Name = "Toggle",
 		StartingState = false,
@@ -3270,7 +3270,7 @@ function Library:ColorPicker(options)
 	return Library.color_picker(self, options)
 end
 
-function Library:Slider(options)
+function Library:slider(options)
 	options = self:set_defaults({
 		Name = "Slider",
 		Default = 50,
