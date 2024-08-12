@@ -468,7 +468,7 @@ function Library:create(options)
 		Size = UDim2.new(),
 		Theme = {BackgroundColor3 = "Main"},
 		Centered = true,
-    BackgroundTransparency = 0.5,
+    BackgroundTransparency = 0.33,
 		ClipsDescendants = true		
 	}):round(10)
 
@@ -594,8 +594,8 @@ function Library:create(options)
 		Size = UDim2.new(1, -10, 0, 25),
 		Position = UDim2.new(0, 5,0, 35),
 		Theme = {BackgroundColor3 = "Secondary"},
-    BackgroundTransparency = 0.4,
-    Transparency = 0.4
+    BackgroundTransparency = 0.33,
+    Transparency = 0.33
 	}):round(5)
 
 	local searchIcon = urlBar:object("ImageLabel", {
@@ -662,7 +662,7 @@ function Library:create(options)
 
 	local homeButton = tabButtons:object("TextButton", {
 		Name = "Home",
-		BackgroundTransparency = 0.4,
+		BackgroundTransparency = 0.33,
 		Theme = {BackgroundColor3 = "Secondary"},
 		Size = UDim2.new(0, 125, 0, 25)
 	}):round(5)
@@ -3187,7 +3187,7 @@ function Library:prompt(options)
 		HorizontalAlignment = Enum.HorizontalAlignment.Center
 	})
 
-	darkener:tween({BackgroundTransparency = 0.4, Length = 0.1})
+	darkener:tween({BackgroundTransparency = 0.33, Length = 0.1})
 	promptContainer:tween({BackgroundTransparency = 0, Length = 0.1})
 	promptTitle:tween({TextTransparency = 0, Length = 0.1})
 	_promptContainerStroke:tween({Transparency = 0, Length = 0.1})
