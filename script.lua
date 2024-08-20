@@ -886,15 +886,6 @@ function Library:create(options)
 		Callback = function()
 			self.Toggled = not self.Toggled
 			Library:show(self.Toggled)
-      for i, v in pairs(game.Players.LocalPlayer:WaitForChild("PlayerGui"):GetChildren()) do
-        if v.Name == getgenv().AC_RGUI then
-          if v.Frame.Visible then
-            v.Frame.Visible = false
-          else
-            v.Frame.Visible = true
-          end
-        end
-      end
 		end,
 	}
 
