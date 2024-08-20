@@ -888,10 +888,10 @@ function Library:create(options)
 			Library:show(self.Toggled)
       for i, v in pairs(game.Players.LocalPlayer:WaitForChild("PlayerGui"):GetChildren()) do
         if v.Name == getgenv().AC_RGUI then
-          if v.Visible then
-            v.Visible = false
+          if v.Frame.Visible then
+            v.Frame.Visible = false
           else
-            v.Visible = true
+            v.Frame.Visible = true
           end
         end
       end
